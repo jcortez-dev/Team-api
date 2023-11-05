@@ -1,5 +1,10 @@
 # Team API
 
+## Team members
+
+- Rodrigro Brevis
+- Jorge Cortez
+
 With this API you can manage users, clubs and members for your team (like sport team, university club, etc)
 
 ## Features 🚀
