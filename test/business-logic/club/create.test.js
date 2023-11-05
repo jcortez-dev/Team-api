@@ -17,7 +17,6 @@ describe('Business logic: Club: Create', () => {
 
   afterEach(async () => {
     jest.resetAllMocks();
-    await ClubModel.deleteMany({});
   });
 
   it('Should create a club on database', async () => {
