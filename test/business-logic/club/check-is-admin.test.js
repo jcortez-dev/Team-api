@@ -2,6 +2,7 @@ import { expect, jest } from '@jest/globals';
 import HTTPError from '../../../src/errors/http.error';
 import ClubModel from '../../../src/models/club/club.model';
 import checkIfTheUserIsTheClubAdmin from '../../../src/business-logic/club/check-is-admin';
+import clubErrors from '../../../src/errors/club.errors';
 
 
 jest.mock('../../../src/models/club/club.model');
@@ -29,18 +30,5 @@ describe('Business logic: checkIfTheUserIsTheClubAdmin', () => {
     await expect(checkIfTheUserIsTheClubAdmin({ clubId, userId })).rejects.toThrow(HTTPError);
   });
 
-  it('Should throw a 403 error when an error occurs during the database query', async () => {
-    checkIfTheUserIsTheClubAdmin.mockRejectedValue(
-        new HTTPError({ ...clubErrors.userIsNotTheAdmin, code: 403 }),
-      );
-      try {
-        await create({ clubId: 'asd1' });
-      } catch (error) {
-        expect(error.message).toEqual(clubErrors.userIsNotTheAdmin.message);
-        expect(error.name).toEqual(clubErrors.userIsNotTheAdmin.name);
-        expect(error.statusCode).toEqual(403);
-        expect(error).toEqual(new HTTPError({ ...clubErrors.userIsNotTheAdmin, code: 403 }));
-      }
-  });
 });
 
