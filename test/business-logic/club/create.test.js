@@ -5,6 +5,7 @@ import create from '../../../src/business-logic/club/create';
 import mongoose from 'mongoose';
 import HTTPError from '../../../src/errors/http.error';
 
+
 jest.mock('../../../src/business-logic/users');
 
 describe('Business logic: Club: Create', () => {
