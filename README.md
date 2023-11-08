@@ -7,6 +7,12 @@
 
 With this API you can manage users, clubs and members for your team (like sport team, university club, etc)
 
+## Code corrections
+
+In src/business-logic/users/get-one.js we fixed the populate method, previously it was called as poulate (line 17).
+
+![fixed code](fix.png)
+
 ## Features 🚀
 
 - Login ✅
