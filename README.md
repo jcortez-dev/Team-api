@@ -2,7 +2,7 @@
 
 ## Team members
 
-- Rodrigro Brevis
+- Rodrigo Brevis
 - Jorge Cortez
 
 With this API you can manage users, clubs and members for your team (like sport team, university club, etc)
@@ -21,6 +21,10 @@ With this API you can manage users, clubs and members for your team (like sport 
 `npm i`
 
 `npm run dev`
+
+## Testing and coverage
+
+`npm run coverage`
 
 ## Environment 🌿
 
